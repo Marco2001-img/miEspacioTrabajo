@@ -1,0 +1,17 @@
+package herencia;
+
+public class Estudiante extends Persona{
+	protected String Carrera;
+	
+	public Estudiante(int id, int edad, String nombre) {
+		super(id, edad, nombre);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	@Override
+	public void mostrarInformacion() {
+		
+	}
+
+}

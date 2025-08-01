@@ -1,0 +1,12 @@
+package Poo;
+
+import java.util.Scanner;
+
+public  class Logica {
+	public valor1,valor2,resultado;
+	public void PedirDatos() {
+		Scanner n = new Scanner(System.in);
+		
+	}
+	
+}

@@ -1,0 +1,24 @@
+package com.mx.Abstra;
+
+public class main {
+	public static void main(String[] args) {
+		Moto m1 = new Moto("Rojo","ABC-1234","Yamaha",2022,"Ninja 400",5000);
+		System.out.println(m1);
+		
+		m1.Trasporte();
+		m1.Trasportegeneral(m1.getColor(), m1.getAño());
+		
+		System.out.println("");
+		Carro c1 = new Carro("Azul","XYZ-7890","Mazda",2020,"Automática",true);
+		System.out.println(c1);
+		
+		c1.Trasporte();
+		c1.Trasportegeneral(c1.getColor(), c1.getAño());
+		
+		
+		
+		
+
+	}
+
+}

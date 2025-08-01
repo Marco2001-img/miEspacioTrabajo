@@ -1,0 +1,14 @@
+package contactos;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Contacto c1 = new Contacto(1, "Juan Pérez", "juan@example.com", "Av. Reforma 123", 5512345678);
+        Contacto c2 = new Contacto(2, "María López", "maria@example.com", "Calle Hidalgo 456", 5587654321);
+        Contacto c3 = new Contacto(3, "Carlos Gómez", "carlos@example.com", "Blvd. Colón 789", 5522334455);
+        Contacto c4 = new Contacto(4, "Ana Torres", "ana@example.com", "Insurgentes Sur 100", 5544667788);
+        Contacto c5 = new Contacto(5, "Luis Ramírez", "luis@example.com", "Calle Juárez 321", 5599988776);
+
+	}
+
+}

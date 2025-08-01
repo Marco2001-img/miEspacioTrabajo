@@ -1,0 +1,22 @@
+package Poo;
+
+import java.util.Scanner;
+
+public abstract class Logica {
+	protected int valor1,valor2,resultado;
+	Scanner entrada = new Scanner(System.in);
+	
+	public void PedirDatos() {
+		System.out.println("dame el primer valor: ");
+		valor1 = entrada.nextInt();
+		
+		System.out.println("dame el otro numero: ");
+		valor2 = entrada.nextInt();
+	}
+	
+	public abstract void Operaciones() {
+		
+	}
+	
+	
+}

@@ -1,0 +1,14 @@
+package Poo;
+
+import java.util.Scanner;
+
+public class Poo {
+
+	public static void main(String[] args) {
+		Logica sumar = new Logica2();
+		sumar.PedirDatos();
+		sumar.Operaciones();
+		sumar.MostrarResultado();
+	}
+
+}

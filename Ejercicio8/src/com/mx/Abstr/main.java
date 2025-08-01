@@ -1,0 +1,20 @@
+package com.mx.Abstr;
+
+public class main {
+
+	public static void main(String[] args) {
+		Abogado abogado = new Abogado("Raul", "Zamora", "UNAM", 25, 45454, 1, "Litigante", "despachono3", 2500);
+		System.out.println(abogado);
+		
+		abogado.trabajar();
+		abogado.cobrar(abogado.getTipo(), abogado.getHonorarios());
+		
+		Medico medico = new Medico("julio","gomez","BUAP",32,45466,10,"Medico Familiar","Hospital angeles",1500);
+		System.out.println(medico);
+		
+		medico.trabajar();
+		medico.cobrar(medico.getEspecialidad(), medico.getCostoConsulta());
+
+	}
+
+}

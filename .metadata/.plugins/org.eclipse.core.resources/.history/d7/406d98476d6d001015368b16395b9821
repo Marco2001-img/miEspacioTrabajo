@@ -1,0 +1,14 @@
+package com.mx.alumno;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Alumno a1 = new Alumno(01,"Jose","jimenez",23,"TI",8);
+		Alumno a2 = new Alumno(20252, "Aldo", "Galindo", 25, "Educador", 2);
+		Alumno a3 = new Alumno(20253, "Fernando", "Molina", 25, "Ing. Agronomia", 4);
+		Alumno A4 = new Alumno(20254, "María", "García", 21, "Contabilidad", 9);
+
+
+	}
+
+}

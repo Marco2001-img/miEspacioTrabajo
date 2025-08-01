@@ -1,0 +1,9 @@
+package com.mx.herencia;
+
+public class Padre {
+	protected String nombre,apellido,nacionalidad;
+	protected int edad;
+	protected double estatura;
+	
+
+}

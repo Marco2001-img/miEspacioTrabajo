@@ -1,0 +1,17 @@
+package com.mx.Animal;
+
+public class Animal {
+	private String especie;
+	private String color;
+	private double peso;
+	private int numeroPatas;
+	
+	public Animal() {
+		
+	}
+	
+	public Animal(String especie,String color,double peso, int numeroPatas) {
+		
+	}
+
+}

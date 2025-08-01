@@ -1,0 +1,16 @@
+package com.mx.alumno;
+
+public class Alumno {
+	private int matricula;
+	private String nombre;
+	private String apellido;
+	private int edad;
+	private String carrera;
+	private int semestre;
+	
+	public Alumno() {
+		
+	}
+	
+	
+}

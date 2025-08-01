@@ -1,0 +1,41 @@
+package com.mx.alumno;
+
+import java.util.HashMap;
+
+public class Implementacion implements IMetodos{
+	HashMap<Integer, Alumno> hash  = new HashMap<Integer,Alumno>();
+
+	@Override
+	public void guardar(Alumno alumno) {
+		hash.put(alumno.getMatricula(), alumno);
+		
+	}
+
+	@Override
+	public Alumno buscar(Alumno alumno) {
+		return hash.get(alumno.getMatricula());
+	}
+
+	@Override
+	public void Editar(Alumno alumno) {
+		hash.replace(alumno.getMatricula(), alumno);
+		
+	}
+
+	@Override
+	public void eliminar(Alumno alumno) {
+		hash.remove(alumno.getMatricula());
+		
+	}
+
+	@Override
+	public void Mostrar(Alumno alumno) {
+		System.out.println(hash);
+		
+	}
+	
+	public void Contar() {
+		System.out.println("Numero de elementos");
+	}
+
+}

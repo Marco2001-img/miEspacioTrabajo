@@ -1,0 +1,11 @@
+package com.mx.herencia;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Hijo h1 = new Hijo("Daniel","Mendez",20,1.40,"mexicana","negro","Delgada");
+		System.out.println(h1);
+		
+	}
+
+}

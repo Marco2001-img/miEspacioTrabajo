@@ -1,0 +1,14 @@
+package com.mx.Abstr;
+
+public class Abogado extends Profesionista{
+
+	private String Tipo,Despacho;
+	private int honorarios;
+	
+	@Override
+	public void trabajar() {
+		
+		
+	}
+
+}

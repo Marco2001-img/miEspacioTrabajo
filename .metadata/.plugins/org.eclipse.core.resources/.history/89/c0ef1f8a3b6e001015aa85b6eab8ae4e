@@ -1,0 +1,12 @@
+package polimorfismo;
+
+public class Deportivo extends Automovil{
+	protected int noClindros;
+	
+	public String mostrarDaTOS() {
+		return "Vehiculo \n"+"Marca "+ this.marca + "\nSubmarca "+this.submarca+"\nModelo: "+this.modelo 
+				  + "numero de cilindros: " + this.capacidadCarga;
+				
+	}
+
+}

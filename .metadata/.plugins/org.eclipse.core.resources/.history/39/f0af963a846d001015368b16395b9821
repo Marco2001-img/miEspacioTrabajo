@@ -1,0 +1,12 @@
+package principal;
+
+import autos.Carros;
+
+public interface IMetodos {
+	public void create(Object carros);
+	public void update(int indice, Carros carros);
+	public void mostrar();
+	public void delete(int indice);
+	public Carros found(int indice);
+
+}

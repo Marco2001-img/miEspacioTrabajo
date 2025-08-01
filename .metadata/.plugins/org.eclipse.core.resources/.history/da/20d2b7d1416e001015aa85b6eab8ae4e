@@ -1,0 +1,36 @@
+package polimorfismo;
+
+public class Perro extends SerVivo{
+	protected String raza;
+	
+	public String mostrarDaTOS() {
+		return "Perro \n"+"Nombre "+ this.nombre + "\nSubmarca "+this.color+"\nModelo: "+this.numeroPatas
+				+"\nRaza " + raza;
+				
+	}
+	
+	public Perro() {
+		
+	}
+
+	public Perro(String nombre, String color, int numeroPatas, String raza) {
+		super(nombre, color, numeroPatas);
+		this.raza = raza;
+	}
+
+	public String getRaza() {
+		return raza;
+	}
+
+	public void setRaza(String raza) {
+		this.raza = raza;
+	}
+
+	@Override
+	public String toString() {
+		return "Perro [nombre=" + nombre + ", color=" + color + ", numeroPatas=" + numeroPatas + ", raza=" + raza + "]";
+	}
+	
+	
+
+}

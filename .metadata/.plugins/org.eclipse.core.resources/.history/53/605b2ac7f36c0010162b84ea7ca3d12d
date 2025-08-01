@@ -1,0 +1,20 @@
+package poo;
+
+public class Main {
+    String nombre;
+
+    Main(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Perro: " + nombre;
+    }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

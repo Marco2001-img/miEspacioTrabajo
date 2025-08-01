@@ -1,0 +1,19 @@
+package contactos;
+
+public class AgendaContact {
+	private String Nombre, Correo, Dirección;
+	private int Teléfono,Id;
+	
+	public AgendaContact() {
+		
+	}
+	
+	public AgendaContact(int Id) {
+		this.Id=Id;
+	}
+	
+	
+	
+	
+
+}

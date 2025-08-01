@@ -1,0 +1,20 @@
+package Poo;
+
+
+
+public class Poo {
+
+	public static void main(String[] args) {
+		Logica2 sumar = new Logica2();
+		sumar.PedirDatos();
+		sumar.Sumar();
+		sumar.resultado();
+		
+		Logica3 resta = new Logica3();
+		resta.PedirDatos();
+		resta.Resta();
+		resta.resultado();
+		
+	}
+
+}

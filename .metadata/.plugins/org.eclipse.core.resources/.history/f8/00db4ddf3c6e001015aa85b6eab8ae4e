@@ -1,0 +1,22 @@
+package principal;
+
+import javax.sound.sampled.AudioFileFormat;
+
+import polimorfismo.Automovil;
+import polimorfismo.Deportivo;
+import polimorfismo.Pickup;
+import polimorfismo.Turismo;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Automovil[]ves = new Automovil[4];
+		ves[0] = new Automovil("honda", "civic", "2002");
+		ves[1] = new Deportivo("ford", "gt", "2003", 8);
+		ves[2] = new Turismo("mercedes", "spinter", "2024", 4);
+		ves[3] = new Pickup("toyota", "tahoma", "2015", 30);
+
+	}
+
+}

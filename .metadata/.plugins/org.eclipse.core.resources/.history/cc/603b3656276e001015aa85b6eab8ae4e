@@ -1,0 +1,11 @@
+package com.mx.Abstr;
+
+public class main {
+
+	public static void main(String[] args) {
+		Abogado abogado = new Abogado("Raul", "Zamora", "UNAM", 25, 45454,, 1, "Litigante", "despachono3", 2500);
+		System.out.println(abogado);
+
+	}
+
+}

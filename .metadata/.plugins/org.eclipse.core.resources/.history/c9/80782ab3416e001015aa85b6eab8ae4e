@@ -1,0 +1,54 @@
+package polimorfismo;
+
+public class SerVivo {
+	protected String nombre,color;
+	protected int numeroPatas;
+	
+	public String mostrarDaTOS() {
+		return "Vehoculo \n"+"Marca "+ this.nombre + "\nSubmarca "+this.color+"\nModelo: "+this.numeroPatas;
+				
+	}
+	
+	public SerVivo() {
+		
+	}
+
+	public SerVivo(String nombre, String color, int numeroPatas) {
+		super();
+		this.nombre = nombre;
+		this.color = color;
+		this.numeroPatas = numeroPatas;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public int getNumeroPatas() {
+		return numeroPatas;
+	}
+
+	public void setNumeroPatas(int numeroPatas) {
+		this.numeroPatas = numeroPatas;
+	}
+
+	@Override
+	public String toString() {
+		return "SerVivo [nombre=" + nombre + ", color=" + color + ", numeroPatas=" + numeroPatas + "]";
+	}
+	
+	
+
+}

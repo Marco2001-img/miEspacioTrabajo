@@ -1,0 +1,12 @@
+package com.mx.Abstra;
+
+public class Carro extends TrasporteGneral{
+
+	@Override
+	public void Trasporte() {
+		System.out.println("carro encendido");
+		
+	}
+	
+
+}

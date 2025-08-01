@@ -1,0 +1,33 @@
+package com.mx.alumno;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Alumno a1 = new Alumno(01,"Jose","jimenez",23,"TI",8);
+		Alumno a2 = new Alumno(20252, "Aldo", "Galindo", 25, "Educador", 2);
+		Alumno a3 = new Alumno(20253, "Fernando", "Molina", 25, "Ing. Agronomia", 4);
+		Alumno a4 = new Alumno(20254, "María", "García", 21, "Contabilidad", 9);
+		Alumno a5 = new Alumno(20256, "Eduardo", "Olvera", 24, "Ing. Robotica", 7);
+		Alumno a6 = new Alumno(3325, "Ximema", "Huesca", 21, "Lic. en Derecho", 6);
+		
+		Alumno alu = null;
+		
+		Implementacion imp = new Implementacion();
+		
+		imp.guardar(a1);
+		imp.guardar(a2);
+		imp.guardar(a3);
+		imp.guardar(a4);
+		imp.guardar(a5);
+		imp.guardar(a6);
+		
+		imp.Mostrar();
+		
+		alu = new Alumno(3325);
+		alu = imp.buscar(alu);
+		System.out.println("encontrado");
+
+
+	}
+
+}

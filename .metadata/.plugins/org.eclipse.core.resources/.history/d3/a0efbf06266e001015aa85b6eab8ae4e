@@ -1,0 +1,12 @@
+package com.mx.Abstr;
+
+public class Medico extends Profesionista{
+
+	@Override
+	public void trabajar() {
+		System.out.println("trabajo en turnos nocturno");
+		
+	}
+	
+
+}

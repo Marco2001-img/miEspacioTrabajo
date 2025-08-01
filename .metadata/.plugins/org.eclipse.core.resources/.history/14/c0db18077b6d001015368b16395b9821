@@ -1,0 +1,38 @@
+package HasMap;
+
+import principal.IMetodos;
+
+public class ImplementacionGenerica implements IMetodos{
+
+	@Override
+	public void guardar(Object object) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Editar(Object object) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Object Buscar(Object object) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void Mostrar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Eliminar(Object object) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

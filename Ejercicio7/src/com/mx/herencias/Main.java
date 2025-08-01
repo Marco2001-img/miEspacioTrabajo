@@ -1,0 +1,18 @@
+package com.mx.herencias;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Padre carro1 = new Padre("Mazda", "3 Touring", "Rojo", 45000, 2020);
+		System.out.println(carro1);
+		
+		carro1.setAño(2025);
+		carro1.setColor("negro");
+		System.out.println("datos actualizados " + carro1);
+		
+		carro1.MarcaAutoFaV();
+
+
+	}
+
+}

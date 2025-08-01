@@ -1,0 +1,12 @@
+package Poo;
+
+public class Logica3 extends Logica{
+
+	@Override
+	public void Operaciones() {
+		resultado = valor1 - valor2;
+		
+	}
+
+
+}

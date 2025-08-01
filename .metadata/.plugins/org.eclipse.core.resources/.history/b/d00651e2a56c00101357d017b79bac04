@@ -1,0 +1,10 @@
+package autos;
+
+public class Carros {
+	private String marca;
+	private String color;
+	private int año;
+	private String modelo;
+
+
+}

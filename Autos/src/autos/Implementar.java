@@ -1,0 +1,46 @@
+package autos;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+public class Implementar implements IAutos{
+	List<Carros> mazda = new ArrayList<Carros>();
+
+	@Override
+	public void create(Carros carros) {
+		mazda.add(carros);
+		
+	}
+
+	@Override
+	public void update(int indice, Carros carros) {
+		mazda.set(indice, carros);
+		
+	}
+
+	@Override
+	public void mostrar() {
+		System.out.println(mazda);
+		
+	}
+
+	@Override
+	public void delete(int indice) {
+		mazda.remove(indice);
+		
+	}
+
+	@Override
+	public Carros found(int indice) {
+		return mazda.get(indice);
+	}
+	
+
+	public void Contar() {
+		int cont=mazda.size();
+		System.out.println("la lista contiene: "+cont);
+	}
+
+}

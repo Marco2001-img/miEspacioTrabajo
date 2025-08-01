@@ -1,0 +1,42 @@
+package lista;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import autos.Carros;
+import principal.IMetodos;
+
+public class ImplementacionGenericaLi implements IMetodos{
+	protected List<Object> mazda = new ArrayList<Object>();
+
+	@Override
+	public void guardar(Object key, Object value) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Editar(Object key, Object value) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Object Buscar(Object key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void Mostrar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Eliminar(Object key) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

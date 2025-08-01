@@ -1,0 +1,14 @@
+package lista;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+import principal.IMetodos;
+
+public class ImplementacionGenericaLi implements IMetodos{
+	protected List<Object> mazda = new ArrayList<Object>();
+
+	
+
+}

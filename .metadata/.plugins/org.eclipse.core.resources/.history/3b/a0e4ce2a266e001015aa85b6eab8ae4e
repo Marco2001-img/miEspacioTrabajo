@@ -1,0 +1,17 @@
+package com.mx.Abstr;
+
+public class Medico extends Profesionista{
+
+	private String especialidad,consultorio;
+	private double costoConsulta;
+	@Override
+	public void trabajar() {
+		System.out.println("trabajo en turnos nocturnos");
+	}
+	
+	public Medico() {
+		
+	}
+	
+
+}

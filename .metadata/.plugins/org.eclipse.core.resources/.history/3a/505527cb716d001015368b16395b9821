@@ -1,0 +1,12 @@
+package contactos;
+
+
+
+public interface IAgendaContact {
+	public void guardar(AgendaContact ac);
+	public Alumno buscar(Alumno alumno);
+	public void Editar(Alumno alumno);
+	public void eliminar(Alumno alumno);
+	public void Mostrar();
+
+}

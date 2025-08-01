@@ -1,0 +1,11 @@
+package herencia;
+
+public class Estudiante extends Persona{
+	protected String Carrera;
+	@Override
+	public void mostrarInformacion() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

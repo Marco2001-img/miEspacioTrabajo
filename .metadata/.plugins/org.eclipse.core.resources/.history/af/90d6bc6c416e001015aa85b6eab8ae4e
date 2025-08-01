@@ -1,0 +1,24 @@
+package principal;
+
+import polimorfismo.Automovil;
+import polimorfismo.Deportivo;
+import polimorfismo.Pickup;
+import polimorfismo.SerVivo;
+import polimorfismo.Turismo;
+
+public class main {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SerVivo[]sv = new SerVivo[3];
+		sv[0] = new SerVivo("Pez Dorado", "Naranja", 0);
+		sv[1] = new Gato("Michi", "Blanco", 4, 24);
+		sv[2] = new Perro("Firulais", "Café", 4, "Labrador");
+		
+		for(SerVivo sv:ves) {
+			System.out.println(auto.mostrarDaTOS());
+			System.out.println(auto);
+		}
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package interfaz;
+
+public interface EstudianteService {
+	public void create(Estudiante estudiante);
+	public void update(int indice, Estudiante estudiante);
+	public void mostrar();
+	public void delete(int indice);
+	public Estudiante found(int indice);
+
+}

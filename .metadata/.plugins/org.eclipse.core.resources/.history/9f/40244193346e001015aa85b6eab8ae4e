@@ -1,0 +1,10 @@
+package com.mx.Abstra;
+
+public class main {
+	public static void main(String[] args) {
+		Moto m1 = new Moto("Rojo","ABC-1234","Yamaha",2022,"Ninja 400",5000);
+		
+
+	}
+
+}

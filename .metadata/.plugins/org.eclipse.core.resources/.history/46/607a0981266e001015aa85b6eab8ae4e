@@ -1,0 +1,60 @@
+package com.mx.Abstr;
+
+public class Medico extends Profesionista{
+
+	private String especialidad,consultorio;
+	private double costoConsulta;
+	@Override
+	public void trabajar() {
+		System.out.println("trabajo en turnos nocturnos");
+	}
+	
+	public Medico() {
+		
+	}
+
+	public Medico(String nombre, String apellido, String universidad, int edad, int cedula, int experiencia,
+			String especialidad, String consultorio, double costoConsulta) {
+		super(nombre, apellido, universidad, edad, cedula, experiencia);
+		this.especialidad = especialidad;
+		this.consultorio = consultorio;
+		this.costoConsulta = costoConsulta;
+	}
+
+	public String getEspecialidad() {
+		return especialidad;
+	}
+
+	public void setEspecialidad(String especialidad) {
+		this.especialidad = especialidad;
+	}
+
+	public String getConsultorio() {
+		return consultorio;
+	}
+
+	public void setConsultorio(String consultorio) {
+		this.consultorio = consultorio;
+	}
+
+	public double getCostoConsulta() {
+		return costoConsulta;
+	}
+
+	public void setCostoConsulta(double costoConsulta) {
+		this.costoConsulta = costoConsulta;
+	}
+
+	@Override
+	public String toString() {
+		return "Medico [nombre=" + nombre + ", apellido=" + apellido + ", universidad=" + universidad + ", edad=" + edad
+				+ ", cedula=" + cedula + ", experiencia=" + experiencia + ", especialidad=" + especialidad
+				+ ", consultorio=" + consultorio + ", costoConsulta=" + costoConsulta + "]";
+	}
+	
+	
+	
+	
+	
+
+}

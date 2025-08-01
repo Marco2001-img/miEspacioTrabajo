@@ -1,0 +1,10 @@
+package com.mx.alumno;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

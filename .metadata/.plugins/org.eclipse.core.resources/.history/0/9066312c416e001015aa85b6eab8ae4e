@@ -1,0 +1,25 @@
+package principal;
+
+import polimorfismo.Automovil;
+import polimorfismo.Deportivo;
+import polimorfismo.Pickup;
+import polimorfismo.SerVivo;
+import polimorfismo.Turismo;
+
+public class main {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SerVivo[]ves = new SerVivo[4];
+		ves[0] = new SerVivo("Pez Dorado", "Naranja", 0);
+		ves[1] = new Gato("ford", "gt", "2003", 8);
+		ves[2] = new Turismo("mercedes", "spinter", "2024", 4);
+		ves[3] = new Pickup("toyota", "tahoma", "2015", 30);
+		
+		for(Automovil auto:ves) {
+			System.out.println(auto.mostrarDaTOS());
+			System.out.println(auto);
+		}
+
+	}
+
+}

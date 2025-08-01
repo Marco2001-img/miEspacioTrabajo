@@ -1,0 +1,27 @@
+package herencia;
+
+/*EXAMEN TEORICO
+ * ¿Qué es la herencia en la Programación Orientada a Objetos? es la creacion de una clase padre que tendra atributos y metodos 
+ * y los podra heredar a sus clases hijas con la palabra reservada extends y haci podremos hacer la reutilizacion de codigo
+• ¿Cuál es la diferencia entre una clase abstracta y una interfaz? en que la abstracta tiene constructor
+ y la interfaz no tiene contructor y clase abstracta no hace herencia multiple ,pero interfaz se puede implementar varias veces
+ 
+  Explica qué es el encapsulamiento y por qué es importante. es encapsular una clase,atributo o metodo y sirve para proteger a 
+  la informacion y solo mostrar lo necesario y se accede a traves de setter y getter 
+• ¿Qué es el polimorfismo y cómo se aplica en Java? la creacion de un metodo de tipo abstracto al igual que la clase y es darle
+el comportamiento diferente dependiendo a que clase se este comunicando
+
+Código: 
+¿Qué hace el siguiente fragmento de código? se crea una clase abstract llamada Animal y un metodo abstract hacerSonido
+y en una clase se hereda a clase Animal y por ende el metodo abstracto se agrega presionanado el boton y dentro del metodo
+hacerSonido agregamos una impresion de guau  y al hacer la instancia del objeto el resultado seria GUAU
+
+ * */
+
+
+public abstract class Persona {
+	protected int id,edad;
+	protected String nombre;
+	public abstract void mostrarInformacion();
+
+}

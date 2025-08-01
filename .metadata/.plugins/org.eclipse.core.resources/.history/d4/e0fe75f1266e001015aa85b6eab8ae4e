@@ -1,0 +1,10 @@
+package com.mx.Abstr;
+
+public class main {
+
+	public static void main(String[] args) {
+		Abogado abogado = new Abogado("Raul", "Zamora", 25, 45454, "UNAM", 1, "Litigante", "despachono3", 2500);
+
+	}
+
+}

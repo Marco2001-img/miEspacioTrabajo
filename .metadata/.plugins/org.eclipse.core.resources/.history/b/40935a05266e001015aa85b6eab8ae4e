@@ -1,0 +1,12 @@
+package com.mx.Abstr;
+
+public class Medico extends Profesionista{
+
+	@Override
+	public void trabajar() {
+		
+		
+	}
+	
+
+}

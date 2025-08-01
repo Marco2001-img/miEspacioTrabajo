@@ -1,0 +1,12 @@
+package autos;
+
+
+
+public interface IAutos {
+	public void create(Carros carros);
+	public void update(int indice, Empleado empleado);
+	public void mostrar();
+	public void delete(int indice);
+	public Empleado found(int indice);
+
+}

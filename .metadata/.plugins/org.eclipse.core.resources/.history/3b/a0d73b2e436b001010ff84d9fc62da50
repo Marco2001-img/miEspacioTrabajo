@@ -1,0 +1,11 @@
+package Poo;
+
+import java.util.Scanner;
+
+public class Poo {
+
+	public static void main(String[] args) {
+
+	}
+
+}

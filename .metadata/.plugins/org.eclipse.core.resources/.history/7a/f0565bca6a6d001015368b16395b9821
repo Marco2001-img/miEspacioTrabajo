@@ -1,0 +1,38 @@
+package com.mx.alumno;
+
+import java.util.HashMap;
+
+public class Implementacion implements IMetodos{
+	HashMap<Integer, Alumno> hash  = new HashMap<Integer,Alumno>();
+
+	@Override
+	public void guardar(Alumno alumno) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Alumno buscar(Alumno alumno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void Editar(Alumno alumno) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void eliminar(Alumno alumno) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void Mostrar(Alumno alumno) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,25 @@
+package entidad;
+
+public class Alumno {
+	private int matricula,edad;
+	private String nombre,aPaterno,aMaterno,carrera,universidad;
+	
+	public Alumno() {
+		
+	}
+
+	public Alumno(int matricula, int edad, String nombre, String aPaterno, String aMaterno, String carrera,
+		String universidad) {
+		super();
+		this.matricula = matricula;
+		this.edad = edad;
+		this.nombre = nombre;
+		this.aPaterno = aPaterno;
+		this.aMaterno = aMaterno;
+		this.carrera = carrera;
+		this.universidad = universidad;
+	}
+	
+	
+
+}
