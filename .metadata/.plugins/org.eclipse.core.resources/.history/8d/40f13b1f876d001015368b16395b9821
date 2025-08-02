@@ -1,0 +1,110 @@
+package principal;
+
+import Entidades.Alumno;
+import Entidades.Animal;
+import Entidades.Motos;
+import lista.ImplementacionAlumno;
+import lista.ImplementacionAnimal;
+import lista.ImplementacionMotos;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Animal ani1 = new Animal("Perro", "negro", 15.50, 4);
+		Animal ani2 = new Animal("Pez payaso", "balnco y naranja", .500, 0);
+		Animal ani3 = new Animal("Gato", "Negro", 5.0, 4);
+		Animal ani4 = new Animal("Gato", "Naranja", 3.5, 4);
+		Animal ani5 = new Animal("Perico", "Verde", 400.0, 2);
+		Animal ani6 = new Animal("cocodrilo", "verde", 60.0, 4);
+		Animal ani7 = new Animal("león","cafe",250.0,4);
+		Animal ani8 = new Animal("Lobo", "morado",10.0 ,8);
+		
+		
+		ImplementacionAnimal impAni = new ImplementacionAnimal();
+		Animal ani = null;
+		impAni.create(ani1);
+		impAni.create(ani2);
+		impAni.create(ani3);
+		
+		impAni.mostrar();
+		
+		System.out.println("BUSCAR");
+		ani = (Animal) impAni.found(1);
+		System.out.println(ani);
+
+		
+		System.out.println("eliminar");
+		impAni.delete(2);
+		impAni.mostrar();
+		
+		
+		System.out.println("contar");
+		impAni.Contar();
+		
+		System.out.println("<<<<< ALUMNOS >>>>>");
+		Alumno a1 = new Alumno(20201, "Luis", "Ramírez", 20, "Ingeniería en Sistemas", 3);
+		Alumno a2 = new Alumno(20202, "María", "Gómez", 21, "Administración", 4);
+		Alumno a3 = new Alumno(20203, "Carlos", "Hernández", 22, "Contaduría", 5);
+		Alumno a4 = new Alumno(20204, "Ana", "López", 19, "Diseño Gráfico", 2);
+		Alumno a5 = new Alumno(20205, "Jorge", "Martínez", 23, "Derecho", 6);
+		
+		ImplementacionAlumno impAlumno = new ImplementacionAlumno();
+		Alumno alumno = null;
+		impAlumno.create(a1);
+		impAlumno.create(a1);
+		impAlumno.create(a3);
+		impAlumno.create(a4);
+		impAlumno.create(a5);
+		impAlumno.mostrar();
+		
+		System.out.println("BUSCAR alumnos");
+		alumno = (Alumno) impAlumno.found(1);
+		System.out.println(alumno);
+		
+		System.out.println("eliminar alumnos");
+		impAlumno.delete(1);
+		impAlumno.mostrar();
+		
+		System.out.println("contar alumnos");
+		impAlumno.Contar();
+		
+		System.out.println("");
+		System.out.println("<<<<< MOTOS >>>>>");
+		Motos m1 = new Motos("Yamaha", "FZ-S", 2021, 150);
+		Motos m2 = new Motos("Honda", "CBR500R", 2022, 500);
+		Motos m3 = new Motos("Kawasaki", "Ninja 400", 2020, 399);
+		Motos m4 = new Motos("Suzuki", "GSX-R600", 2019, 600);
+		Motos m5 = new Motos("Ducati", "Panigale V2", 2023, 955);
+
+	
+		ImplementacionMotos impMotos = new ImplementacionMotos();
+		Motos motos = null;
+		impMotos.create(m1);
+		impMotos.create(m1);
+		impMotos.create(m3);
+		impMotos.create(m4);
+		impMotos.create(m5);
+		impMotos.mostrar();
+		
+		System.out.println("BUSCAR motos");
+		motos = (Motos) impMotos.found(3);
+		System.out.println(motos);
+		
+		
+		System.out.println("eliminar motos");
+		impMotos.delete(4);
+		impMotos.mostrar();
+		
+		System.out.println("contar motos");
+		impMotos.Contar();
+		
+		
+		
+		
+		
+
+		
+
+	}
+
+}

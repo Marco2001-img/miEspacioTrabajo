@@ -1,0 +1,5 @@
+package com.mx.Abstr;
+
+public abstract class Profesionista {
+
+}

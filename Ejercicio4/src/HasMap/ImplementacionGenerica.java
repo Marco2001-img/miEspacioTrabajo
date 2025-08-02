@@ -1,0 +1,40 @@
+package HasMap;
+
+import java.util.HashMap;
+
+import principal.IMetodos;
+
+public class ImplementacionGenerica implements IMetodos{
+	protected HashMap<Object, Object> hash = new HashMap<Object, Object>();
+
+	@Override
+	public void guardar(Object key, Object value) {
+		hash.put( key ,  value);
+		
+	}
+
+	@Override
+	public void Editar(Object key, Object value) {
+		hash.replace(key, value);
+		
+	}
+
+	@Override
+	public Object Buscar(Object key) {
+		return hash.get(key);
+	}
+
+	@Override
+	public void Mostrar() {
+		System.out.println(hash);
+		
+	}
+
+	@Override
+	public void Eliminar(Object key) {
+		hash.remove(key);
+		
+	}
+	
+
+}

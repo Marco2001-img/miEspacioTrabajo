@@ -1,0 +1,19 @@
+package Poo;
+
+import java.util.Scanner;
+
+public class Poo {
+
+	public static void main(String[] args) {
+		Logica2 suma = new Logica2();
+		suma.PedirDatos();
+		suma.Sumar();
+		suma.MostrarDatos();
+		
+		Logica3 restar = new Logica3();
+		restar.PedirDatos();
+		restar.Resta();
+		restar.MostrarDatos();
+	}
+
+}

@@ -1,0 +1,14 @@
+package poo;
+
+public class Main {
+
+
+	public static void main(String[] args) {
+        Object miPerro = new Main("Firulais"); // Aunque es tipo Object, es un Perro
+        System.out.println(miPerro.toString());  // Perro: Firulais
+        System.out.println(miPerro.getClass());  // class Perro
+
+
+	}
+
+}

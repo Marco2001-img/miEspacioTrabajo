@@ -1,0 +1,27 @@
+package com.mx.Abstra;
+
+public class Carro extends TrasporteGneral{
+
+	protected String trasmision;
+	protected boolean QuemaCocos=false;
+	
+	@Override
+	public void Trasporte() {
+		System.out.println("carro encendido");
+		
+	}
+	
+	public Carro() {
+		
+	}
+
+	public Carro(String color, String noPlacas, String marca, int año, String trasmision, boolean quemaCocos) {
+		super();
+		this.trasmision = trasmision;
+		QuemaCocos = quemaCocos;
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,18 @@
+package Entidades;
+
+public class Motos {
+    private String marca;
+    private String modelo;
+    private int año;
+    private int cilindraje;
+
+	public Motos() {
+		
+	}
+	
+	public Motos(int año) {
+		this.año=año;
+		
+	}
+
+}

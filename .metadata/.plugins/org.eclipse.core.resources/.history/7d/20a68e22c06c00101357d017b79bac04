@@ -1,0 +1,237 @@
+package autos;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		Carros mazda1 = new Carros("Mazda", "Rojo", 2020, "Mazda 3");
+		Carros mazda2 = new Carros("Mazda", "Blanco", 2019, "CX-5");
+		Carros mazda3 = new Carros("Mazda", "Negro", 2021, "CX-30");
+		Carros mazda4 = new Carros("Mazda", "Gris", 2022, "Mazda 6");
+		Carros mazda5 = new Carros("Mazda", "Azul", 2023, "MX-5 Miata");
+
+		Carros automazda = null;
+
+		Implementar imp = new Implementar();
+		
+		System.out.println("AGREGAR");
+		imp.create(mazda1);
+		imp.create(mazda2);
+		imp.create(mazda3);
+		imp.create(mazda4);
+		imp.create(mazda5);
+
+		imp.mostrar();
+		
+		System.out.println("BUSCAR");
+		automazda = imp.found(1);
+		System.out.println(automazda);
+
+		System.out.println("ACTUALIZAR");
+		automazda = imp.found(0);
+		automazda.setColor("rojo");
+		automazda.setModelo("cx5 grand touring");
+		imp.update(0, automazda);
+		System.out.println("MOSTRAR LISTA ACTUALIZADA");
+		imp.mostrar();
+
+		System.out.println("borrar");
+		imp.delete(2);
+		imp.mostrar();
+		
+		System.out.println("contar");
+		imp.Contar();
+		
+		Scanner datos  = new Scanner(System.in);
+		int menuP=0,menuS=0,indice=0;
+		String marca;
+		String color;
+		int año;
+		String modelo;
+		
+		do {
+			System.out.println("<<<<<<<<< MAZDA >>>>>>>>");
+			System.out.println("Menu");
+			System.out.println("1.-Alta Auto");
+			System.out.println("2.-Buscar Auto");
+			System.out.println("3.-editar Auto");
+			System.out.println("4.-eliminar Auto");
+			System.out.println("5.-mostrar Autos");
+			System.out.println("6.-contar Autos");
+			System.out.println("7.-salir");
+			System.out.println("elige una opcion");
+			try {
+				menuP=datos.nextInt();
+				datos.nextLine();
+				
+				switch(menuP) {
+				case 1:
+					System.out.println("alta");
+					System.out.println("llena los siguientes datos sobre el auto");
+					
+					System.out.println("marca: ");
+					marca=datos.nextLine();
+					
+					System.out.println("color");
+					color=datos.nextLine();
+					
+					System.out.println("año: ");
+					año = datos.nextInt();
+					datos.nextLine();
+					
+					System.out.println("modelo: ");
+					modelo = datos.nextLine();
+					
+					
+					automazda = new Carros(marca,color,año,modelo);
+					imp.create(automazda);
+					System.out.println("guardado");
+					break;
+					
+				case 2:
+					System.out.println("buscar");
+					imprimirDatos(imp);
+					if(imp.mazda.size()>0) {
+						System.out.println("indica para mostrar informacion");
+						indice = datos.nextInt();
+						datos.nextLine();
+						
+						if(indice>=0 && indice<imp.mazda.size()) {
+							automazda = imp.found(indice);
+							System.out.println("esta es la informacion del empleado " + automazda);
+						}else {
+							System.out.println("no se encontro informacion");
+						}
+						
+					}
+					break;
+					
+				case 3:
+					imprimirDatos(imp);
+					if(imp.mazda.size()>0) {
+						System.out.println("indique el indice que desee editar");
+						indice=datos.nextInt();
+						datos.nextLine();
+						
+						if(indice >=0 && indice<imp.mazda.size()) {
+							do {
+								System.out.println("Sub menu");
+								System.out.println("1.-marca");
+								System.out.println("2.-color");
+								System.out.println("3.-año");
+								System.out.println("4.-modelo");
+								System.out.println("5.-salir");
+								System.out.println("elige una opcion");
+								menuS = datos.nextInt();
+								datos.nextLine();
+								automazda = imp.found(indice);
+								
+								switch(menuS) {
+								case 1:
+									System.out.println("ingresa el nueva marca: ");
+									marca = datos.nextLine();
+									automazda.setMarca(marca);
+									break;
+									
+								case 2:
+									System.out.println("ingrese el nuevo color");
+									color = datos.nextLine();
+									automazda.setColor(color);
+									break;
+									
+								case 3:
+									System.out.println("ingresa el nuevo año");
+									año = datos.nextInt();
+									automazda.setAño(año);
+									break;
+									
+								case 4:
+									System.out.println("ingresa el nuevo modelo: ");
+									modelo = datos.nextLine();
+									automazda.setModelo(modelo);
+									break;
+									
+								case 5:
+									System.out.println("regresando al menu principal");
+									break;
+									
+									default:
+										System.out.println("indice no valido");
+										break;
+								}
+								System.out.println("edicion exitosa");
+							}while(menuS!=5);
+						}else {
+							System.out.println("este indice no existe");
+						}
+					}
+					break;
+					
+				case 4:
+				    if (imp.mazda.size() == 0) {
+				        System.out.println("No hay autos registrados para eliminar.");
+				    } else {
+				        imprimirDatos(imp);
+				        System.out.print("Indica el índice del auto que deseas eliminar: ");
+				        indice = datos.nextInt();
+
+				        if (indice >= 0 && indice < imp.mazda.size()) {
+				            imp.delete(indice);
+				            System.out.println("Auto eliminado correctamente.");
+				        } else {
+				            System.out.println("El índice ingresado no existe.");
+				        }
+				    }
+				    break;
+					
+				case 5:
+					System.out.println("mostrar");
+					if(imp.mazda.size() > 0) {
+						imp.mostrar();
+					}else {
+						System.out.println("no hay datos");
+					}
+					break;
+					
+				case 6:
+					System.out.println("contar autos");
+					imp.Contar();
+					break;
+					
+				case 7:
+					System.out.println("saliendo, vuelva pronto");
+					break;
+				
+					default:
+						System.out.println("indice fuera de rango");
+						break;
+				}
+			}catch(InputMismatchException e) {
+				System.out.println("entrada invalda");
+				datos.nextLine();
+				
+			}catch(Exception e ) {
+				System.out.println("ocurrio un error " + e.getMessage());
+			}
+			
+		}while(menuP!=7);
+
+	}
+
+	private static void imprimirDatos(Implementar imp) {
+		System.out.println("Autos registrados");
+		if(imp.mazda.size() > 0 ) {
+			for(int i = 0; i<imp.mazda.size(); i++) {
+				System.out.println("el auto "+ i+ " " + imp.mazda.get(i).getMarca());
+					
+			}
+		}else {
+			System.out.println("no hay autos registrados");
+		}
+
+	}
+
+}

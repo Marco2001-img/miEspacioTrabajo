@@ -1,0 +1,66 @@
+package com.mx.Abstra;
+
+public abstract class TrasporteGneral {
+	protected String color,noPlacas,marca;
+	protected int año;
+	
+	public abstract void Trasporte();
+	
+	public void Trasporte(String color,int año) {
+		System.out.println("El carro tiene el color " + color + " con el año " + año);
+	}
+	
+	
+	public TrasporteGneral()
+	{
+		
+	}
+
+	public TrasporteGneral(String color, String noPlacas, String marca, int año) {
+		super();
+		this.color = color;
+		this.noPlacas = noPlacas;
+		this.marca = marca;
+		this.año = año;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public String getNoPlacas() {
+		return noPlacas;
+	}
+
+	public void setNoPlacas(String noPlacas) {
+		this.noPlacas = noPlacas;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public int getAño() {
+		return año;
+	}
+
+	public void setAño(int año) {
+		this.año = año;
+	}
+
+	@Override
+	public String toString() {
+		return "TrasporteGneral [color=" + color + ", noPlacas=" + noPlacas + ", marca=" + marca + ", año=" + año + "]";
+	}
+	
+	
+	
+}

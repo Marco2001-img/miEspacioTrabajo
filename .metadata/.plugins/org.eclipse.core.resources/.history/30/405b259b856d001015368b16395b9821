@@ -1,0 +1,43 @@
+package principal;
+
+import Entidades.Animal;
+import HasMap.ImplementacionAni;
+import lista.ImplementacionAnimal;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Animal ani1 = new Animal("Perro", "negro", 15.50, 4);
+		Animal ani2 = new Animal("Pez payaso", "balnco y naranja", .500, 0);
+		Animal ani3 = new Animal("Gato", "Negro", 5.0, 4);
+		Animal ani4 = new Animal("Gato", "Naranja", 3.5, 4);
+		Animal ani5 = new Animal("Perico", "Verde", 400.0, 2);
+		Animal ani6 = new Animal("cocodrilo", "verde", 60.0, 4);
+		Animal ani7 = new Animal("león","cafe",250.0,4);
+		Animal ani8 = new Animal("Lobo", "morado",10.0 ,8);
+		
+		
+		ImplementacionAnimal impAni = new ImplementacionAnimal();
+		Animal ani = null;
+		impAni.create(ani1);
+		impAni.create(ani2);
+		impAni.create(ani3);
+		
+		impAni.mostrar();
+		
+		System.out.println("BUSCAR");
+		ani = (Animal) impAni.found(1);
+		System.out.println(ani);
+
+		
+		System.out.println("eliminar");
+		impAni.Eliminar(ani1.getEspecie());
+		impAni.Mostrar();
+		
+		
+		System.out.println("contar");
+		impAni.contar();
+
+	}
+
+}

@@ -1,0 +1,41 @@
+package interfaz;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.mx.empleado.Empleado;
+
+public class Implementar implements EstudianteService{
+	List<Estudiante> estudiante = new ArrayList<Estudiante>();
+
+	@Override
+	public void create(Estudiante estudiante) {
+		estudiante.add(estudiante);
+		
+	}
+
+	@Override
+	public void update(int indice, Estudiante estudiante) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mostrar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(int indice) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Estudiante found(int indice) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

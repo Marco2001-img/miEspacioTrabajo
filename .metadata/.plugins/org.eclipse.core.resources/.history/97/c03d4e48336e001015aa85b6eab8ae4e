@@ -1,0 +1,13 @@
+package com.mx.Abstra;
+
+public abstract class TrasporteGneral {
+	protected String color,noPlacas,marca;
+	protected int año;
+	
+	public abstract void Trasporte();
+	
+	public TrasporteGneral()
+	{
+		
+	}
+}

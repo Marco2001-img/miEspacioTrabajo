@@ -1,0 +1,41 @@
+package autos;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+public class Implementar implements IAutos{
+	List<Carros> mazda = new ArrayList<Carros>();
+
+	@Override
+	public void create(Carros carros) {
+		mazda.add(carros);
+		
+	}
+
+	@Override
+	public void update(int indice, Carros carros) {
+		mazda.set(indice, carros);
+		
+	}
+
+	@Override
+	public void mostrar() {
+		System.out.println(carros);
+		
+	}
+
+	@Override
+	public void delete(int indice) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Carros found(int indice) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

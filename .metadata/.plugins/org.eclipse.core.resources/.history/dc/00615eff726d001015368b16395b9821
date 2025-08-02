@@ -1,0 +1,49 @@
+package contactos;
+
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		AgendaContact c1 = new AgendaContact(1, "Juan Pérez", "juan@example.com", "Av. Reforma 123", 451515);
+		AgendaContact c2 = new AgendaContact(2, "María López", "maria@example.com", "Calle Hidalgo 456", 54466);
+		AgendaContact c3 = new AgendaContact(3, "Carlos Gómez", "carlos@example.com", "Blvd. Colón 789", 7856160);
+		AgendaContact c4 = new AgendaContact(4, "Ana Torres", "ana@example.com", "Insurgentes Sur 100", 1616);
+		AgendaContact c5 = new AgendaContact(5, "Luis Ramírez", "luis@example.com", "Calle Juárez 321", 1031313);
+		
+		AgendaContact agc = null;
+		
+		Implementar imp = new Implementar();
+		
+		imp.guardar(c1);
+		imp.guardar(c2);
+		imp.guardar(c3);
+		imp.guardar(c4);
+		imp.guardar(c5);
+		
+		
+		imp.Mostrar();
+		
+		agc = new AgendaContact(1);
+		agc = imp.buscar(agc);
+		System.out.println("encontrado: "+agc);
+		
+		System.out.println("editar");
+		agc = new AgendaContact(2);
+		agc = imp.buscar(agc);
+		agc.setNombre("Raul");
+		imp.Editar(agc);
+		imp.Mostrar();
+		
+		agc = new AgendaContact(3);
+		agc = imp.buscar(agc);
+		imp.eliminar(agc);
+		imp.Mostrar();
+		
+		
+		imp.Contar();
+
+
+	}
+
+}

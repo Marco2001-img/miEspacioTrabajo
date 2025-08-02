@@ -1,0 +1,13 @@
+package herencia;
+
+public class main {
+
+	public static void main(String[] args) {
+		Estudiante estudiante = new Estudiante(1, 22,"Marco", "Ingeniería en Sistemas");
+		Administrador admin1 = new Administrador(101, 35, "Laura Martínez", "Recursos Humanos");
+		estudiante.mostrarInformacion();
+		admin1.mostrarInformacion();
+		
+	}
+
+}

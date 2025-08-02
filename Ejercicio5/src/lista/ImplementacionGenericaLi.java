@@ -1,0 +1,43 @@
+package lista;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+import principal.IMetodos;
+
+public class ImplementacionGenericaLi implements IMetodos{
+	protected List<Object> lista = new ArrayList<Object>();
+
+	@Override
+	public void create(Object carros) {
+		lista.add(carros);
+		
+	}
+
+	@Override
+	public void update(int indice, Object carros) {
+		lista.set(indice, carros);
+		
+	}
+
+	@Override
+	public void mostrar() {
+		System.out.println(lista);
+		
+	}
+
+	@Override
+	public void delete(int indice) {
+		lista.remove(indice);
+		
+	}
+
+	@Override
+	public Object found(int indice) {
+		return lista.get(indice);
+	}
+
+	
+
+}

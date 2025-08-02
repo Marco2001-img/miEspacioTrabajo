@@ -1,0 +1,224 @@
+package com.mx.carros;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.mx.Animal.Animal;
+import com.mx.carros.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Carros carr1 = new Carros("negro","mazda",1.0,220);	
+		Carros carr2 = new Carros("rojo", "Mazda", 2.0, 220);
+		Carros carr3 = new Carros("rojo", "Toyota", 1.2, 150);
+		Carros carr4 = new Carros("blanco", "Nissan", 1.5, 300);
+		Carros carr5 = new Carros("azul", "Ford", 1.8, 180);
+		Carros carr6 = new Carros("blanco", "Toyota", 1.2, 300);
+		Carros carr7 = new Carros("gris", "suburban", 1.5, 400);
+		Carros carr8 = new Carros("azul", "mazda cx5", 1.8, 180);
+		
+		List<Carros> carros = new ArrayList<Carros>();
+		carros.add(carr1);
+		carros.add(carr2);
+		carros.add(carr3);
+		carros.add(carr4);
+		carros.add(carr5);
+		carros.add(carr6);
+		carros.add(carr7);
+		carros.add(carr8);
+		Carros auxAutos = null;
+		/*
+		System.out.println(carros);
+        
+        System.out.println("auxiliar");
+        
+       
+        auxAutos = carros.get(2);
+        System.out.println(auxAutos);
+        
+        System.out.println("Editado:");
+        auxAutos = carros.get(0);
+        auxAutos.setColor("rojo mate");
+        auxAutos.setMarca("MG");
+        System.out.println(auxAutos);
+
+        
+        System.out.println("eliminar");
+        carros.remove(6);
+        System.out.println(carros);
+        
+        
+        System.out.println("contar elementos: "+carros.size());
+        
+        carros.clear();
+        if(carros.isEmpty()) {
+        	System.out.println("esta vacia");
+        }else {
+        	System.out.println(carros);
+        }
+        */
+		
+		
+		Scanner scan = null;
+		int menuprincipal=0,menuSecundario=0,indice=0;
+		String marca;
+		String color;
+		double peso;
+		int kilometraje;
+		
+		do {
+			System.out.println("MENU");
+			System.out.println("1.-Agregar Nuevo Auto");
+			System.out.println("2.-Mostrar Lista de autos");
+			System.out.println("3.-Editar Lista de autos");
+			System.out.println("4.-Buscar un auto");
+			System.out.println("5.-Eliminar auto");
+			System.out.println("6.-contar autos");
+			System.out.println("7.-salir");
+			System.out.println("elige una opcion");
+			scan = new Scanner(System.in);
+			menuprincipal = scan.nextInt();
+			
+			switch(menuprincipal) {
+			case 1:
+				System.out.println("Agregar nuevo auto: ");
+				
+				System.out.println("marca del auto: ");
+				scan = new Scanner(System.in);
+				marca = scan.nextLine();
+				
+				System.out.println("color del auto: ");
+				scan = new Scanner(System.in);
+				color = scan.nextLine();
+				
+				System.out.println("peso: ");
+				scan = new Scanner(System.in);
+				peso = scan.nextDouble();
+				scan.nextLine();
+				
+				System.out.println("numero de patas: ");
+				scan = new Scanner(System.in);
+				kilometraje = scan.nextInt();	
+				
+				auxAutos = new Carros(marca,color,peso,kilometraje);
+				carros.add(auxAutos);
+				
+				System.out.println("el registro se guardo con exito...");
+				break;
+				
+			case 2:
+				System.out.println("Mostrando lista: ");
+				System.out.println(carros);
+				break;
+				
+			case 3:
+				System.out.println("editar elemento");
+				System.out.println("ingresa el indice para editar");
+				scan=new Scanner(System.in);
+				indice = scan.nextInt();
+				scan.nextLine();
+				auxAutos=carros.get(indice);
+				do {
+					System.out.println("1.-editar marca del auto");
+					System.out.println("2..-editar color del auto");
+					System.out.println("3.editar peso del auto");
+					System.out.println("4.-editar kilometraje del auto");
+					System.out.println("5.ir a menu principal");
+					System.out.println("elige una opcion");
+					scan = new Scanner(System.in);
+					menuSecundario=scan.nextInt();
+					scan.nextLine();
+					
+					switch(menuSecundario) {
+					case 1:
+						System.out.println("escribe el nombre de la marca del auto");
+						scan = new Scanner(System.in);
+						marca = scan.nextLine();
+						auxAutos.setEspecie(marca);
+						carros.set(indice,auxAutos);
+						System.out.println("se guardo correctamente");
+						break;
+						
+					case 2:
+						System.out.println("escribe el color del auto");
+						scan = new Scanner(System.in);
+						color = scan.nextLine();
+						auxAutos.setColor(color);
+						carros.set(indice,auxAutos);
+						System.out.println("se guardo correctamente");
+						break;
+						
+					case 3:
+						System.out.println("escribe el color");
+						scan = new Scanner(System.in);
+						peso = scan.nextDouble();
+						auxAutos.setPeso(peso);
+						carros.set(indice,auxAutos);
+						System.out.println("se guardo correctamente");
+						
+						break;
+						
+					case 4:
+						System.out.println("escribe el kilometraje del auto");
+						scan = new Scanner(System.in);
+						kilometraje = scan.nextInt();
+						auxAutos.setNumeroPatas(kilometraje);
+						carros.set(indice,auxAutos);
+						System.out.println("se guardo correctamente");
+						break;
+						
+					case 5:
+						System.out.println("regresando al menu principal");
+						break;
+						
+						default:
+							System.out.println("indice fuera de rango");
+							break;
+					}
+					
+					
+				}while(menuSecundario!=5);
+				break;
+				
+			case 4:
+				System.out.println("4.Buscar un elemeto: ");
+				System.out.println("Cual es el indice que busca: ");
+				scan = new Scanner(System.in);
+				indice = scan.nextInt();
+				auxAutos = carros.get(indice);
+				System.out.println("Elemento encontrado: "+auxAutos);
+				break;
+				
+			case 5:
+				System.out.println("Eliminar Elemento");
+				System.out.println("que elemeto desea eliminar: ");
+				scan = new Scanner(System.in);
+				indice = scan.nextInt();
+				animales.remove(indice);
+				System.out.println("elemento eliminado, actuzalizada " + animales);
+				break;
+				
+			case 6:
+				System.out.println("contar elementos de la lista");
+				System.out.println(animales.size());
+				break;
+				
+			case 7:
+				System.out.println("saliendo...");
+				break;
+				
+				default:
+					System.out.println("opcion invalida");
+					break;
+			}
+			
+			}while(menuprincipal!=7);
+		
+		
+		
+		
+	}
+
+}

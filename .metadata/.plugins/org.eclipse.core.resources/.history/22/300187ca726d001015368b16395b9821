@@ -1,0 +1,50 @@
+package contactos;
+
+import com.mx.alumno.Alumno;
+import com.mx.alumno.Implementacion;
+
+public class Main {
+
+	public static void main(String[] args) {
+		AgendaContact c1 = new AgendaContact(1, "Juan Pérez", "juan@example.com", "Av. Reforma 123", 451515);
+		AgendaContact c2 = new AgendaContact(2, "María López", "maria@example.com", "Calle Hidalgo 456", 54466);
+		AgendaContact c3 = new AgendaContact(3, "Carlos Gómez", "carlos@example.com", "Blvd. Colón 789", 7856160);
+		AgendaContact c4 = new AgendaContact(4, "Ana Torres", "ana@example.com", "Insurgentes Sur 100", 1616);
+		AgendaContact c5 = new AgendaContact(5, "Luis Ramírez", "luis@example.com", "Calle Juárez 321", 1031313);
+		
+		AgendaContact agc = null;
+		
+		Implementar imp = new Implementar();
+		
+		imp.guardar(a1);
+		imp.guardar(a2);
+		imp.guardar(a3);
+		imp.guardar(a4);
+		imp.guardar(a5);
+		imp.guardar(a6);
+		
+		imp.Mostrar();
+		
+		alu = new Alumno(3325);
+		alu = imp.buscar(alu);
+		System.out.println("encontrado: "+alu);
+		
+		System.out.println("editar");
+		alu = new Alumno(20252);
+		alu = imp.buscar(alu);
+		alu.setNombre("Raul");
+		imp.Editar(alu);
+		imp.Mostrar();
+		
+		alu = new Alumno(20252);
+		alu = imp.buscar(alu);
+		imp.eliminar(alu);
+		imp.Mostrar();
+		
+		
+		imp.Contar();
+
+
+	}
+
+}

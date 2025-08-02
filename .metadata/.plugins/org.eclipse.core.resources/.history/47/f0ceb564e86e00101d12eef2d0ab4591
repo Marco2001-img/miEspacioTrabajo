@@ -1,0 +1,11 @@
+package EstaticosConstantes;
+
+import java.security.Principal;
+
+public class Prueba {
+	principal ob1 = new principal();
+	
+	System.out.println(""+ob1.frase2);
+	
+
+}

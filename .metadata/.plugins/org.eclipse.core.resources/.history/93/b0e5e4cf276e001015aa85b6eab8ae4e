@@ -1,0 +1,16 @@
+package com.mx.Abstr;
+
+public abstract class Profesionista {
+	protected String nombre,apellido,universidad;
+	protected int edad,cedula,experiencia;
+	
+	public abstract void trabajar();
+	
+	public void cobrar(String trabajo,Double sueldo) {
+		System.out.println("trabajo como " + trabajo + " y me pagan " + sueldo);
+	}
+	
+	
+	
+
+}

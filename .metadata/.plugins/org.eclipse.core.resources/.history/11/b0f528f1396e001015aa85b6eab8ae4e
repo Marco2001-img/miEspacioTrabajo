@@ -1,0 +1,10 @@
+package polimorfismo;
+
+public class Automovil {
+	protected String marca,submarca,modelo;
+	
+	public String mostrarDaTOS() {
+		return "Vehoculo \n"+"Marca "+ this.marca + "\nSubmarca "+this.submarca
+	}
+
+}

@@ -1,0 +1,39 @@
+package contactos;
+
+import java.util.HashMap;
+
+import com.mx.alumno.Alumno;
+
+public class Implementar implements IAgendaContact {
+	HashMap<Integer, AgendaContact> hash  = new HashMap<Integer,AgendaContact>();
+
+	@Override
+	public void guardar(AgendaContact ac) {
+		hash.put(ac.getId(), ac);
+		
+	}
+
+	@Override
+	public AgendaContact buscar(AgendaContact ac) {
+		return hash.get(ac.getId());
+	}
+
+	@Override
+	public void Editar(AgendaContact ac) {
+		hash.replace(ac.getId(), ac);
+		
+	}
+
+	@Override
+	public void eliminar(AgendaContact ac) {
+		hash.remove(ac.getId());
+		
+	}
+
+	@Override
+	public void Mostrar() {
+		System.out.println(hash);
+		
+	}
+
+}

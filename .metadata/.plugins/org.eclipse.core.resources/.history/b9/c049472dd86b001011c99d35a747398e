@@ -1,0 +1,22 @@
+package com.mx.carros;
+
+public class Carros {
+	private String color;
+	private String marca;
+	private double peso;
+	private int kilometraje;
+	
+	public Carros() {
+		
+	}
+	
+	public Carros(String color,String marca,double peso, int kilometraje) {
+		this.color = color;
+		this.marca = marca;
+		this.peso = peso;
+		this.kilometraje = kilometraje;
+	}
+	
+	
+	
+}

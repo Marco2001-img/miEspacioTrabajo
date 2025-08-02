@@ -1,0 +1,12 @@
+package polimorfismo;
+
+public class SerVivo {
+	protected String nombre,color;
+	protected int numeroPatas;
+	
+	public String mostrarDaTOS() {
+		return "Vehoculo \n"+"Marca "+ this.nombre + "\nSubmarca "+this.color+"\nModelo: "+this.numeroPatas;
+				
+	}
+
+}

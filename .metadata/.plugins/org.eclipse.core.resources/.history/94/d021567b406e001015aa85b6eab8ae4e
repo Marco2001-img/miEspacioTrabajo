@@ -1,0 +1,6 @@
+package polimorfismo;
+
+public class Gato extends SerVivo{
+	protected String nombre;
+
+}

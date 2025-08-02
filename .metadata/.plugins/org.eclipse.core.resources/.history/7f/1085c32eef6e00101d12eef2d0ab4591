@@ -1,0 +1,46 @@
+package lambda;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import entidad.Alumno;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Alumno al1 = new Alumno(202578, "Hilario", "Flores", "Rojas", 20, "Ing. Sistemas Computacionales", "BUAP");
+		Alumno al2 = new Alumno(202576, "Luis", "Osorio", "Jimenez", 23, "Lic. Psicologia", "BUAP");
+		Alumno al3 = new Alumno(265686, "Ximena", "Huesca", "Alarcon", 21, "Arquitectura", "Anahuac");
+		Alumno al4 = new Alumno(297757, "Camila", "Ortiz", "Gomez", 24, "Medicina", "UASLP");
+		Alumno al5 = new Alumno(1001, "Ana", "Pérez", "López",21,  "Ingeniería Civil","buap");
+		
+		List<Alumno> alumnos = new ArrayList<Alumno>();
+		alumnos.add(al1);
+		alumnos.add(al2);
+		alumnos.add(al3);
+		alumnos.add(al4);
+		alumnos.add(al5);
+		
+		alumnos.forEach(
+				(alumno) -> {System.out.println("Nombre alumno "
+		+ alumno.getNombre());
+				}
+				);
+		System.out.println("\nDetalle del alumno");
+		alumnos.stream().filter(
+				arq -> arq.getUniversidad().equalsIgnoreCase("BUAP")
+				).forEach(
+						alumno -> System.out.println("Nombre: "+alumno.getNombre()
+						+ " "+ alumno.getaPaterno() + " estudia " + alumno.getCarrera() 
+						+ " en la universidad " + alumno.getUniversidad()
+						));
+		System.out.println("edad");
+		alumnos.stream()
+	    .filter(alumno -> alumno.getEdad() > 27)
+	    .forEach(a -> System.out.println("Mayor de 27: " + a.getNombre()));
+		
+		ISaludo mensaje = (saludo,despedida) -> saludo + " y " + despedida;
+		System.out.println("Expresiones lammda "+ mensaje.Saludar("hola", "hasta luego"));
+	}
+
+}

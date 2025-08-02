@@ -1,0 +1,14 @@
+package herencia;
+
+/*EXAMEN TEORICO
+ * ¿Qué es la herencia en la Programación Orientada a Objetos? es la creacion de una clase padre que tendra atributos y metodos 
+ * y los podra heredar a sus clases hijas con la palabra reservada extends y haci podremos hacer la reutilizacion de codigo
+• ¿Cuál es la diferencia entre una clase abstracta y una interfaz? en que la abstracta tiene constructor
+ y la interfaz no tiene contructor y clase abstracta no hace herencia multiple pero interfaz se puede implementar varias veces
+
+ * */
+
+
+public abstract class Persona {
+
+}

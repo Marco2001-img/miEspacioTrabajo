@@ -1,0 +1,87 @@
+package lambda;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.OptionalDouble;
+
+import entidad.Alumno;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Alumno al1 = new Alumno(202578, "Hilario", "Flores", "Rojas", 20, "Ing. Sistemas Computacionales", "BUAP");
+		Alumno al2 = new Alumno(202576, "Luis", "Osorio", "Jimenez", 23, "Lic. Psicologia", "BUAP");
+		Alumno al3 = new Alumno(265686, "Ximena", "Huesca", "Alarcon", 21, "Arquitectura", "Anahuac");
+		Alumno al4 = new Alumno(297757, "Camila", "Ortiz", "Gomez", 28, "Medicina", "UASLP");
+		Alumno al5 = new Alumno(1001, "Ana", "Pérez", "López",30,  "Ingeniería Civil","buap");
+		
+		List<Alumno> alumnos = new ArrayList<Alumno>();
+		alumnos.add(al1);
+		alumnos.add(al2);
+		alumnos.add(al3);
+		alumnos.add(al4);
+		alumnos.add(al5);
+		
+		alumnos.forEach(
+				(alumno) -> {System.out.println("Nombre alumno "
+		+ alumno.getNombre());
+				}
+				);
+		System.out.println("\nDetalle del alumno");
+		alumnos.stream().filter(
+				arq -> arq.getUniversidad().equalsIgnoreCase("BUAP")
+				).forEach(
+						alumno -> System.out.println("Nombre: "+alumno.getNombre()
+						+ " "+ alumno.getaPaterno() + " estudia " + alumno.getCarrera() 
+						+ " en la universidad " + alumno.getUniversidad()
+						));
+		
+        System.out.println("\n=== Alumnos mayores de 27 años ===");
+        alumnos.stream()
+            .filter(a -> a.getEdad() > 27)
+            .forEach(a -> System.out.println(a.getNombre()));
+        
+        System.out.println("\n=== Alumnos cuyo nombre empieza con 'A' ===");
+        alumnos.stream()
+            .filter(a -> a.getNombre().toLowerCase().startsWith("a"))
+            .forEach(a -> System.out.println(a.getNombre()));
+
+        System.out.println("\n=== Alumnos ordenados por nombre ===");
+        alumnos.stream()
+            .sorted(Comparator.comparing(Alumno::getNombre))
+            .forEach(a -> System.out.println(a.getNombre()));
+
+        System.out.println("\n=== Total alumnos de Medicina ===");
+        long totalMedicina = alumnos.stream()
+            .filter(a -> a.getCarrera().equalsIgnoreCase("Medicina"))
+            .count();
+        System.out.println("Cantidad: " + totalMedicina);
+
+        System.out.println("\n=== Nombres en mayúsculas ===");
+        alumnos.stream()
+            .map(a -> a.getNombre().toUpperCase())
+            .forEach(System.out::println);
+
+        System.out.println("\n=== Promedio de edad ===");
+        OptionalDouble promedioEdad = alumnos.stream()
+            .mapToInt(Alumno::getEdad)
+            .average();
+        System.out.println("Promedio: " + (promedioEdad.isPresent() ? promedioEdad.getAsDouble() : "N/A"));
+
+        System.out.println("\n=== ¿Existe alumno de Arquitectura? ===");
+        boolean existeArq = alumnos.stream()
+            .anyMatch(a -> a.getCarrera().equalsIgnoreCase("Arquitectura"));
+        System.out.println(existeArq ? "Sí" : "No");
+
+        System.out.println("\n=== Alumnos de BUAP en Lic. Psicologia ===");
+        alumnos.stream()
+            .filter(a -> a.getUniversidad().equalsIgnoreCase("BUAP") &&
+                         a.getCarrera().equalsIgnoreCase("Lic. Psicologia"))
+            .forEach(a -> System.out.println(a.getNombre()));
+		
+		ISaludo mensaje = (saludo,despedida) -> saludo + " y " + despedida;
+		System.out.println("Expresiones lammda "+ mensaje.Saludar("hola", "hasta luego"));
+	}
+
+}

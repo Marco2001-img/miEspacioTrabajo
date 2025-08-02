@@ -1,0 +1,12 @@
+package polimorfismo;
+
+public class Gato extends SerVivo{
+	protected int NumBigotes;
+	
+	public String mostrarDaTOS() {
+		return "Vehoculo \n"+"Marca "+ this.nombre + "\nSubmarca "+this.color+"\nModelo: "+this.numeroPatas
+				+"\nNomb " + NumBigotes;
+				
+	}
+
+}

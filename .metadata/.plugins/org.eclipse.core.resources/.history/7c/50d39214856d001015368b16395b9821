@@ -1,0 +1,8 @@
+package lista;
+
+public class ImplementacionMotos extends ImplementacionGenericaLi{
+	public void Contar() {
+		System.out.println("Hay "+ lista.size() + " motas");
+	}
+
+}

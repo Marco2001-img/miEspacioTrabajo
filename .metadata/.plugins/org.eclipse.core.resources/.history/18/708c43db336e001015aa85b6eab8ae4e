@@ -1,0 +1,13 @@
+package com.mx.Abstra;
+
+public class Moto extends TrasporteGneral{
+
+	protected String modelo;
+	protected int kilometraje;
+	@Override
+	public void Trasporte() {
+		System.out.println("moto encendida");
+		
+	}
+
+}

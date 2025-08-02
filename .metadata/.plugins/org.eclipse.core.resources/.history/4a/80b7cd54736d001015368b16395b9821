@@ -1,0 +1,74 @@
+package contactos;
+
+public class AgendaContact {
+	private String Nombre, Correo, Dirección;
+	private int Teléfono,Id;
+	
+	public AgendaContact() {
+		
+	}
+	
+	public AgendaContact(int Id) {
+		this.Id=Id;
+	}
+
+	public AgendaContact(int id,String nombre, String correo, String dirección, int teléfono) {
+		super();
+		Nombre = nombre;
+		Correo = correo;
+		Dirección = dirección;
+		Teléfono = teléfono;
+		Id = id;
+	}
+
+	public String getNombre() {
+		return Nombre;
+	}
+
+	public void setNombre(String nombre) {
+		Nombre = nombre;
+	}
+
+	public String getCorreo() {
+		return Correo;
+	}
+
+	public void setCorreo(String correo) {
+		Correo = correo;
+	}
+
+	public String getDirección() {
+		return Dirección;
+	}
+
+	public void setDirección(String dirección) {
+		Dirección = dirección;
+	}
+
+	public int getTeléfono() {
+		return Teléfono;
+	}
+
+	public void setTeléfono(int teléfono) {
+		Teléfono = teléfono;
+	}
+
+	public int getId() {
+		return Id;
+	}
+
+	public void setId(int id) {
+		Id = id;
+	}
+
+	@Override
+	public String toString() {
+		return "AgendaContact [Nombre=" + Nombre + ", Correo=" + Correo + ", Dirección=" + Dirección + ", Teléfono="
+				+ Teléfono + ", Id=" + Id + "]";
+	}
+	
+	
+	
+	
+
+}

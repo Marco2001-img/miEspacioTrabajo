@@ -1,0 +1,58 @@
+package com.mx.Abstr;
+
+public class Abogado extends Profesionista{
+
+	private String Tipo,Despacho;
+	private double honorarios;
+	
+	@Override
+	public void trabajar() {
+		System.out.println("trabajo tod el dia");
+	}
+	
+	public Abogado() {
+		
+	}
+
+	public Abogado(String nombre, String apellido, String universidad, int edad, int cedula, int experiencia,
+			String tipo, String despacho, int honorarios) {
+		super();
+		Tipo = tipo;
+		Despacho = despacho;
+		this.honorarios = honorarios;
+	}
+
+	public String getTipo() {
+		return Tipo;
+	}
+
+	public void setTipo(String tipo) {
+		Tipo = tipo;
+	}
+
+	public String getDespacho() {
+		return Despacho;
+	}
+
+	public void setDespacho(String despacho) {
+		Despacho = despacho;
+	}
+
+	public int getHonorarios() {
+		return honorarios;
+	}
+
+	public void setHonorarios(int honorarios) {
+		this.honorarios = honorarios;
+	}
+
+	@Override
+	public String toString() {
+		return "Abogado [Tipo=" + Tipo + ", Despacho=" + Despacho + ", honorarios=" + honorarios + ", nombre=" + nombre
+				+ ", apellido=" + apellido + ", universidad=" + universidad + ", edad=" + edad + ", cedula=" + cedula
+				+ ", experiencia=" + experiencia + "]";
+	}
+	
+	
+
+}

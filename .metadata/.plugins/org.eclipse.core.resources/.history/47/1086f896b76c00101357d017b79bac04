@@ -1,0 +1,185 @@
+package com.mx.empleado;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Empleado emp1 = new Empleado("gerardo","lopez",25,15161313,"aux.contable","contabilidad");
+		Empleado emp2 = new Empleado("Loreyn", "Allard", 18, 1234567890, "Developer", "Desarrollo");
+		Empleado emp3 = new Empleado("Laura", "Ramírez", 30, 10293847, "Jefa de Recursos Humanos", "Recursos Humanos");
+		Empleado emp4 = new Empleado("Saul", "Vega", 23, 2449876323L, "Recursos Humanos", "RRHH");
+
+
+		Empleado emp = null;
+
+		Implementacion imp = new Implementacion();
+
+		imp.create(emp1);
+		imp.create(emp2);
+		imp.create(emp3);
+		imp.create(emp4);
+
+		imp.mostrar();
+
+		emp = imp.found(1);
+		System.out.println(emp);
+
+
+		emp = imp.found(0);
+		emp.setArea("Finanzas");
+		emp.setContacto(4646461323L);
+		imp.update(0, emp);
+		imp.mostrar();
+
+
+		imp.delete(2);
+		imp.mostrar();
+
+		imp.Contar();
+		
+		Scanner datos  = new Scanner(System.in);
+		int menuP=0,menuS=0,indice=0;
+		String nombre,apellido,puesto,area;
+		int edad;
+		Long contacto;
+		
+		do {
+			System.out.println("Menu");
+			System.out.println("1.-Alta");
+			System.out.println("2.-Buscar");
+			System.out.println("3.-editar");
+			System.out.println("4.-eliminar");
+			System.out.println("5.-mostrar");
+			System.out.println("6.-contar");
+			System.out.println("7.-salir");
+			System.out.println("elige una opcion");
+			try {
+				menuP=datos.nextInt();
+				datos.nextLine();
+				
+				switch(menuP) {
+				case 1:
+					System.out.println("alta");
+					System.out.println("llena los siguientes datos sobre el empleado");
+					
+					System.out.println("nombre: ");
+					nombre=datos.nextLine();
+					
+					System.out.println("apellido");
+					apellido=datos.nextLine();
+					
+					System.out.println("edad: ");
+					edad = datos.nextInt();
+					datos.nextLine();
+					
+					System.out.println("contacto");
+					contacto=datos.nextLong();
+					datos.nextLine();
+					
+					System.out.println("puesto: ");
+					puesto = datos.nextLine();
+					
+					
+					System.out.println("area: ");
+					area = datos.nextLine();
+					
+					emp = new Empleado(nombre,apellido,edad,contacto,puesto,area);
+					imp.create(emp);
+					System.out.println("guardado");
+					break;
+					
+				case 2:
+					System.out.println("buscar");
+					imprimirDatos(imp);
+					if(imp.empleados.size()>0) {
+						System.out.println("indica para mostrar informacion");
+						indice = datos.nextInt();
+						datos.nextLine();
+						
+						if(indice>=0 && indice<imp.empleados.size()) {
+							emp = imp.found(indice);
+							System.out.println("esta es la informacion del empleado " + emp);
+						}else {
+							System.out.println("no se encontro informacion");
+						}
+						
+					}
+					break;
+					
+				case 3:
+					imprimirDatos(imp);
+					if(imp.empleados.size()>0) {
+						System.out.println("indique el indice que desee editar");
+						indice=datos.nextInt();
+						datos.nextLine();
+						
+						if(indice >=0 && indice<imp.empleados.size()) {
+							do {
+								System.out.println("Sub menu");
+								System.out.println("1.-nombre");
+								System.out.println("2.-Apellido");
+								System.out.println("3.-edad");
+								System.out.println("4.-contacto");
+								System.out.println("5.-puesto");
+								System.out.println("6.-area");
+								System.out.println("7.-regresar al menu principal");
+								System.out.println("elige una opcion");
+								menuS = datos.nextInt();
+								datos.nextLine();
+								emp = imp.found(indice);
+								
+								switch(menuS) {
+								case 1:
+									System.out.println("ingresa el nuevo nombre: ");
+									nombre = datos.nextLine();
+									emp.setNombre(nombre);
+									break;
+									
+								case 2:
+									System.out.println("ingrese el nuevo apellido");
+									apellido = datos.nextLine();
+									emp.setApellido(apellido);
+									break;
+									
+								case 3:
+									System.out.println("ingresa la nueva edad");
+									edad = datos.nextInt();
+									emp.setEdad(edad);
+									break;
+								}
+								
+							}while(menuS!=7);
+						}
+					}
+					break;
+				
+				}
+				
+			}catch(Exception e ) {
+				
+			}
+			
+		}while(menuP!=7);
+		
+
+
+
+	}
+
+	private static void imprimirDatos(Implementacion imp) {
+		System.out.println("Empleados registrados");
+		if(imp.empleados.size() > 0 ) {
+			for(int i = 0; i<imp.empleados.size(); i++) {
+				System.out.println("el empleado "+ i+ " " + imp.empleados.get(i).getNombre());
+					
+			}
+		}else {
+			System.out.println("no hay empleados registrados");
+		}
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,20 @@
+package Poo;
+
+public class Logica {
+	private int valor1,valor2,resultado;
+	
+	public Logica(int numero1, int numero2) {
+		this.valor1 = numero1;
+		this.valor2 = numero2;
+	}
+	
+	private void Operacion()
+	{
+		resultado = valor1 + valor2;
+	}
+	
+	public void Resultado() {
+		Operacion();
+		System.out.println("Suma: " + resultado);
+	}
+}

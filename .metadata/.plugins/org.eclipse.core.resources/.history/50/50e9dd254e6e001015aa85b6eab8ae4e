@@ -1,0 +1,17 @@
+package herencia;
+
+public class Administrador extends Persona{
+	protected String departamento;
+	
+	public Administrador(int id, int edad, String nombre) {
+		super(id, edad, nombre);
+		
+	}
+	
+	@Override
+	public void mostrarInformacion() {
+		
+		
+	}
+
+}

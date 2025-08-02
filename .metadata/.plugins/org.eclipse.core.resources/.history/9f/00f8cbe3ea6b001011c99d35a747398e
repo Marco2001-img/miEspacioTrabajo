@@ -1,0 +1,191 @@
+package com.mx.Animal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Animal ani1 = new Animal("perro","rojo",1.0,4);	
+		Animal ani2 = new Animal("pez payaso","blanco con naranja",2.0,2);
+		Animal ani3 = new Animal("Gato", "Negro", 5.0, 4);
+		Animal ani4 = new Animal("pulpo", "morado",10 ,8);
+		Animal ani5= new  Animal("león","cafe",250,4);
+		Animal ani6 = new Animal ("cocodrilo", "verde", 60, 4);
+		Animal ani7 = new Animal("Perico", "Verde", .400, 2);
+		Animal ani8 = new Animal("Gato", "Naranja", 3.5, 4);
+		
+		
+		List<Animal> animales = new ArrayList<Animal>();
+		animales.add(ani1);
+		animales.add(ani2);
+		animales.add(ani3);
+		animales.add(ani4);
+		animales.add(ani5);
+		animales.add(ani6);
+		animales.add(ani7);
+		animales.add(ani8);
+		Animal auxAni = null;
+		/*
+		System.out.println(animales);
+		
+		System.out.println("");
+        for (Animal animal : animales) {
+            System.out.println(animal);
+        }
+        
+        System.out.println("auxiliar");
+        
+        
+        auxAni = animales.get(2);
+        System.out.println(auxAni);
+        
+        System.out.println("Editado:");
+        auxAni = animales.get(0);
+        auxAni.setEspecie("jirafa");
+        auxAni.setColor("amarillo y cafe");
+        System.out.println(auxAni);
+
+        
+        System.out.println("eliminar");
+        animales.remove(6);
+        System.out.println(animales);
+        
+        
+        System.out.println("contar elementos: "+animales.size());
+        
+        animales.clear();
+        if(animales.isEmpty()) {
+        	System.out.println("esta vacia");
+        }else {
+        	System.out.println(animales);
+        	*/
+		
+		Scanner scan = null;
+		int menuprincipal=0,menuSecundario=0,indice=0;
+		String especie;
+		String color;
+		double peso;
+		int numeroPatas;
+		
+		do {
+			System.out.println("MENU");
+			System.out.println("1.-Agregar Nuevo");
+			System.out.println("2.-Mostrar Lista");
+			System.out.println("3.-Editar Lista");
+			System.out.println("4.-Buscar un elemento");
+			System.out.println("5.-Eliminar elemento");
+			System.out.println("6.-contar elementos");
+			System.out.println("7.-salir");
+			System.out.println("elige una opcion");
+			scan = new Scanner(System.in);
+			menuprincipal = scan.nextInt();
+			
+			switch(menuprincipal) {
+			case 1:
+				System.out.println("Agregar nuevo registro: ");
+				System.out.println("especie del animal: ");
+				scan = new Scanner(System.in);
+				especie = scan.nextLine();
+				
+				System.out.println("color del animal: ");
+				scan = new Scanner(System.in);
+				color = scan.nextLine();
+				
+				System.out.println("peso: ");
+				scan = new Scanner(System.in);
+				peso = scan.nextDouble();
+				scan.nextLine();
+				
+				System.out.println("numero de patas: ");
+				scan = new Scanner(System.in);
+				numeroPatas = scan.nextInt();	
+				
+				auxAni = new Animal(especie,color,peso,numeroPatas);
+				animales.add(auxAni);
+				
+				System.out.println("el registro se guardo con exito...");
+				
+				break;
+				
+			case 2:
+				System.out.println("Mostrando lista: ");
+				System.out.println(animales);
+				break;
+				
+			case 3:
+				System.out.println("editar elemento");
+				System.out.println("ingresa el indice para editar");
+				//scan=new Scanner(System.in);
+				indice = scan.nextInt();
+				scan.nextLine();
+				auxAni=animales.get(indice);
+				do {
+					System.out.println("1.-editar especie");
+					System.out.println("2..-editar color");
+					System.out.println("3.editar peso");
+					System.out.println("4.-editar numero de patas");
+					System.out.println("5.salir");
+					System.out.println("elige una opcion");
+					scan = new Scanner(System.in);
+					menuSecundario=scan.nextInt();
+					
+					switch(menuSecundario) {
+					case 1:
+						System.out.println("escribe la especie");
+						scan = new Scanner(System.in);
+						especie = scan.nextLine();
+						auxAni.setEspecie(especie);
+						animales.set(indice,auxAni);
+						System.out.println("se guardo correctamente");
+						break;
+						
+					case 2:
+						System.out.println("escribe el color");
+						scan = new Scanner(System.in);
+						color = scan.nextLine();
+						auxAni.setColor(color);
+						animales.set(indice,auxAni);
+						System.out.println("se guardo correctamente");
+						break;
+						
+					case 3:
+						System.out.println("escribe el color");
+						scan = new Scanner(System.in);
+						peso = scan.nextDouble();
+						auxAni.setPeso(peso);
+						animales.set(indice,auxAni);
+						System.out.println("se guardo correctamente");
+						break;
+						
+					case 4:
+						System.out.println("escribe el numero de patas");
+						scan = new Scanner(System.in);
+						numeroPatas = scan.nextInt();
+						auxAni.setNumeroPatas(numeroPatas);
+						animales.set(indice,auxAni);
+						System.out.println("se guardo correctamente");
+						break;
+						
+					case 5:
+						System.out.println("regresando al menu principal");
+						break;
+						
+						default:
+							System.out.println("indice fuera de rango");
+							break;
+					}
+					
+					
+				}while(menuSecundario!=5);
+				break;
+			}
+			
+		}while(menuprincipal!=7);
+		
+		
+		
+        
+        }
+        
+	}

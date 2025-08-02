@@ -1,0 +1,19 @@
+package com.mx.herencias;
+
+public class Hijo extends Padre{
+	protected String tipoCombustible,trasmision;
+	
+	public Hijo() {
+		
+	}
+	
+	public Hijo(String marca, String modelo, String color, int kilometraje, int año, String tipoCombustible,
+			String trasmision) {
+		super(marca, modelo, color, kilometraje, año);
+		this.tipoCombustible = tipoCombustible;
+		this.trasmision = trasmision;
+	}
+	
+	
+
+}

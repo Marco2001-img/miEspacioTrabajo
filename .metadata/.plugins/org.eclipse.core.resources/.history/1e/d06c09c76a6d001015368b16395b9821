@@ -1,0 +1,5 @@
+package com.mx.alumno;
+
+public class Implementacion implements IMetodos{
+
+}

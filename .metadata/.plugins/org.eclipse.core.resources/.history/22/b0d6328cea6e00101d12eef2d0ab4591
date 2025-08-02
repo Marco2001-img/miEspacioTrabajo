@@ -1,0 +1,12 @@
+package lambda;
+
+import entidad.Alumno;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Alumno all = new Alumno(516262,"hilario","flores","rojas",20,"sistemas computacionales","buap");
+
+	}
+
+}

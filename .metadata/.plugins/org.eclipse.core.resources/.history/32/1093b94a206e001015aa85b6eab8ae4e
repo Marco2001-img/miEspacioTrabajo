@@ -1,0 +1,12 @@
+package com.mx.herencias;
+
+public class Hijo extends Padre{
+	protected String tipoCombustible,trasmision;
+	
+	public Hijo() {
+		
+	}
+	
+	
+
+}

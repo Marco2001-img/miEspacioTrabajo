@@ -1,0 +1,20 @@
+package polimorfismo;
+
+public class Pickup extends Automovil {
+	
+	protected int capacidadCarga;
+	
+	public String mostrarDaTOS() {
+		return "Vehiculo \n"+"Marca "+ this.marca + "\nSubmarca "+this.submarca+"\nModelo: "+this.modelo 
+				  + "Capacidad de carga: " + this.capacidadCarga;
+				
+	}
+	
+	public Pickup() {
+		
+	}
+	
+	
+	
+
+}

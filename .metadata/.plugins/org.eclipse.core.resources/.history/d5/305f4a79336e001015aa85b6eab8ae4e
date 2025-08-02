@@ -1,0 +1,18 @@
+package com.mx.Abstra;
+
+public abstract class TrasporteGneral {
+	protected String color,noPlacas,marca;
+	protected int año;
+	
+	public abstract void Trasporte();
+	
+	public void cobrar(String color,int año) {
+		System.out.println("El carro tiene el color " + color + " con el año " + año);
+	}
+	
+	
+	public TrasporteGneral()
+	{
+		
+	}
+}

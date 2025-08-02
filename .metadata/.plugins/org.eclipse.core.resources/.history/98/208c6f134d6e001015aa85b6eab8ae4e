@@ -1,0 +1,38 @@
+package interfaz;
+
+public class main {
+
+	public static void main(String[] args) {
+		Estudiante e1 = new Estudiante(1001, "Laura", "Gómez", 20, "Ingeniería en Sistemas", 4);
+		Estudiante e2 = new Estudiante(1002, "Carlos", "Ramírez", 22, "Administración", 6);
+		Estudiante e3 = new Estudiante(1003, "Sofía", "López", 19, "Psicología", 3);
+		Estudiante e4 = new Estudiante(1004, "Miguel", "Hernández", 21, "Contaduría", 5);
+		Estudiante e5 = new Estudiante(1005, "Andrea", "Martínez", 23, "Derecho", 7);
+		
+		Estudiante est = null;
+		Implementar imp = new Implementar();
+		imp.create(e1);
+		imp.create(e2);
+		imp.create(e3);
+		imp.create(e4);
+		imp.create(e5);
+
+		imp.mostrar();
+
+		emp = imp.found(1);
+		System.out.println(emp);
+
+
+		emp = imp.found(0);
+		emp.setArea("Finanzas");
+		emp.setContacto(4646461323L);
+		imp.update(0, emp);
+		imp.mostrar();
+
+
+		imp.delete(2);
+		imp.mostrar();
+
+	}
+
+}

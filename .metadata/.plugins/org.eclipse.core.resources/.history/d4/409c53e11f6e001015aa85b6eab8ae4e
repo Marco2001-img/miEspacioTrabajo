@@ -1,0 +1,6 @@
+package com.mx.herencias;
+
+public class Padre {
+	protected String marca,modelo,color;
+	protected int kilometraje,año;
+}

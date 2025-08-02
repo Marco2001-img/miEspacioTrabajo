@@ -1,0 +1,46 @@
+package com.mx.Abstra;
+
+public class Moto extends TrasporteGneral{
+
+	protected String modelo;
+	protected int kilometraje;
+	@Override
+	public void Trasporte() {
+		System.out.println("moto encendida");
+		
+	}
+	public Moto() {
+		
+	}
+	public Moto(String color, String noPlacas, String marca, int año, String modelo, int kilometraje) {
+		super();
+		this.modelo = modelo;
+		this.kilometraje = kilometraje;
+		this.color=color;
+		this.noPlacas=noPlacas;
+		this.marca=marca;
+		this.año=año;
+		
+	}
+	public String getModelo() {
+		return modelo;
+	}
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+	public int getKilometraje() {
+		return kilometraje;
+	}
+	public void setKilometraje(int kilometraje) {
+		this.kilometraje = kilometraje;
+	}
+	@Override
+	public String toString() {
+		return "Moto [color=" + color + ", noPlacas=" + noPlacas + ", marca=" + marca + ", año=" + año + ", modelo="
+				+ modelo + ", kilometraje=" + kilometraje + "]";
+	}
+	
+
+	
+
+}

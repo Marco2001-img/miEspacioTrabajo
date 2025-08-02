@@ -1,0 +1,12 @@
+package interfaz;
+
+import com.mx.empleado.Empleado;
+
+public interface EstudianteService {
+	public void create(Estudiante estudiante);
+	public void update(int indice, Estudiante empleado);
+	public void mostrar();
+	public void delete(int indice);
+	public Empleado found(int indice);
+
+}
